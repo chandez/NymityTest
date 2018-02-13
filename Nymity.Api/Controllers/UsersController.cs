@@ -9,6 +9,9 @@ namespace HttpRestApi.Controllers
     [Route("api/Users")]
     public class UsersController : Controller
     {
+        /// <summary>
+        /// User repository
+        /// </summary>
         private IUserRepository _userRepository;
 
         /// <summary>
@@ -26,10 +29,10 @@ namespace HttpRestApi.Controllers
         /// <returns>User object.</returns>
         // GET: api/Users
         [HttpGet]
-        public IEnumerable<User> Get()
+        public IActionResult Get()
         {
             var users = _userRepository.Get();
-            return users;
+            return Ok(users);
         }
 
         /// <summary>
@@ -38,11 +41,17 @@ namespace HttpRestApi.Controllers
         /// <param name="id">user id</param>
         /// <returns>User object</returns>
         // GET: api/Users/5
-        [HttpGet("{id}", Name = "Get")]
-        public User Get(int id)
+        [HttpGet("{id}", Name = "GetUsers")]
+        public IActionResult Get(int id)
         {
             var user = _userRepository.Get(id);
-            return user;
+
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(user);
         }
 
         /// <summary>

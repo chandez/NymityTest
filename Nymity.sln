@@ -18,6 +18,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Database", "Database", "{CB
 		Database\Northwind_log.ldf = Database\Northwind_log.ldf
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nymity.Test", "Nymity.Test\Nymity.Test.csproj", "{E8007E10-36F2-4F22-BBDC-35519AB8B28C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,6 +34,10 @@ Global
 		{34FD3AD5-365C-42F9-96CD-632541B92CFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{34FD3AD5-365C-42F9-96CD-632541B92CFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{34FD3AD5-365C-42F9-96CD-632541B92CFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8007E10-36F2-4F22-BBDC-35519AB8B28C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8007E10-36F2-4F22-BBDC-35519AB8B28C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8007E10-36F2-4F22-BBDC-35519AB8B28C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8007E10-36F2-4F22-BBDC-35519AB8B28C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

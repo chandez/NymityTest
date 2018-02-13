@@ -25,29 +25,29 @@ namespace Nymity.Api.Controllers
         }
 
         // GET: api/Products/5
-        //[HttpGet("{id}", Name = "Get")]
-        //public Product Get(int id)
-        //{
-        //    var product = _productRepository.Get(id);
-        //    return product;
-        //}
+        [HttpGet("{id}", Name = "GetProducts")]
+        public Product Get(int id)
+        {
+            var product = _productRepository.Get(id);
+            return product;
+        }
 
-        //// POST: api/Products
-        //[HttpPost]
-        //public void Post([FromBody]string value)
-        //{
-        //}
+        // POST: api/Products
+        [HttpPost]
+        public void Post([FromBody]string value)
+        {
+        }
 
-        //// PUT: api/Products/5
-        //[HttpPut("{id}")]
-        //public void Put(int id, [FromBody]string value)
-        //{
-        //}
+        // PUT: api/Products/5
+        [HttpPut("{id}")]
+        public void Put(int id, [FromBody]string value)
+        {
+        }
 
-        //// DELETE: api/ApiWithActions/5
-        //[HttpDelete("{id}")]
-        //public void Delete(int id)
-        //{
-        //}
+        // DELETE: api/ApiWithActions/5
+        [HttpDelete("{id}")]
+        public void Delete(int id)
+        {
+        }
     }
 }
