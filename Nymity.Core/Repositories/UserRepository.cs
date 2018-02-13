@@ -15,6 +15,20 @@ namespace Nymity.Core.Repositories
             _connectionFactory = connectionFactory;
         }
 
+        public User Authenticate(string login, string password)
+        {
+            var query = @"SELECT [Id], [Name], [Email], [Password] FROM [dbo].[Users] WHERE [Id] = @id";
+
+            User user;
+
+            using (IDbConnection connection = _connectionFactory.GetConnection)
+            {
+                user = SqlMapper.QueryFirstOrDefault<User>(connection, query, new { id });
+            }
+
+            return user;
+        }
+
         public IEnumerable<User> Get()
         {
             var query = @"SELECT [Id], [Name], [Email], [Password] FROM [dbo].[Users]";
