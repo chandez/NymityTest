@@ -1,8 +1,17 @@
 <div class="wrapper">
-    <form method="post" class="form-signin bg-light">
+    <form method="post" name="form" (ngSubmit)="f.form.valid && login()" #f="ngForm" novalidate class="form-signin bg-light">
         <h2 class="form-signin-heading">Login</h2>
-        <input type="text" class="form-control" id="login" name="login" placeholder="Login"/>
-        <input type="password" class="form-control" id="password" name="password" placeholder="Password"/>
-        <button class="btn btn-lg btn-primary btn-block" type="button">Login</button>
+        <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !email.valid }">
+            <input type="text" class="form-control" name="email" [(ngModel)]="model.email" #email="ngModel" required placeholder="E-mail" />
+            <div *ngIf="f.submitted && !email.valid" class="text-danger">E-mail is required</div>
+        </div>
+        <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !password.valid }">
+            <input type="password" class="form-control" name="password" [(ngModel)]="model.password" #password="ngModel" required placeholder="Password" />
+            <div *ngIf="f.submitted && !password.valid" class="text-danger">Password is required</div>
+        </div>
+        <div class="form-group">
+            <button [disabled]="loading" class="btn btn-lg btn-primary btn-block">Login</button>
+            <a [routerLink]="['/register']" class="btn btn-lg btn-primary btn-block">Register</a>
+        </div>
     </form>
 </div>

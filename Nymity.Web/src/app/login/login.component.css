@@ -6,6 +6,10 @@ body {
     margin: 80px;
 }
 
+input.ng-touched.ng-invalid{
+    border: 1px solid red;
+}
+
 .form-signin {
     max-width: 400px;
     padding: 15px 35px 45px;
@@ -36,7 +40,6 @@ body {
 }
 
 .form-signin input[type="password"] {
-    margin-bottom: 20px;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
 }

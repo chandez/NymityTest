@@ -24,6 +24,12 @@ namespace Nymity.Api
         {
             services.AddMvc();
 
+            services.AddCors(options =>
+            {
+                options.AddPolicy("webappcros",
+                    policy => policy.WithOrigins("http://localhost:4200"));
+            });
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new Info { Title = "API", Version = "v1" });
@@ -47,6 +53,8 @@ namespace Nymity.Api
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseCors("webappcros");
 
             app.UseSwagger();
 

@@ -17,7 +17,7 @@ namespace Nymity.Core.Repositories
 
         public IEnumerable<Product> Get()
         {
-            var query = @"SELECT ProductID, ProductName, SupplierID, CategoryID, QuantityPerUnit, UnitPrice, UnitsInStock, UnitsOnOrder, ReorderLevel, Discontinued FROM [dbo].[Products]";
+            var query = @"SELECT ProductID, ProductName, SupplierID, CategoryID, QuantityPerUnit, UnitPrice, UnitsInStock, UnitsOnOrder, ReorderLevel, Discontinued FROM [dbo].[Products] ORDER BY ProductID";
 
             IEnumerable<Product> products;
 

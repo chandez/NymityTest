@@ -10,7 +10,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".git", ".git", "{E110A881-6
 		.gitignore = .gitignore
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nymity.Api", "Nymity.Api\Nymity.Api.csproj", "{34FD3AD5-365C-42F9-96CD-632541B92CFF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nymity.Api", "Nymity.Api\Nymity.Api.csproj", "{34FD3AD5-365C-42F9-96CD-632541B92CFF}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Database", "Database", "{CBD33364-4439-4CA7-845E-DF43D70EA142}"
 	ProjectSection(SolutionItems) = preProject
@@ -18,7 +18,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Database", "Database", "{CB
 		Database\Northwind_log.ldf = Database\Northwind_log.ldf
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nymity.Test", "Nymity.Test\Nymity.Test.csproj", "{E8007E10-36F2-4F22-BBDC-35519AB8B28C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nymity.Test", "Nymity.Test\Nymity.Test.csproj", "{E8007E10-36F2-4F22-BBDC-35519AB8B28C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

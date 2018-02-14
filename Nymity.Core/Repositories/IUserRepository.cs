@@ -7,6 +7,6 @@ namespace Nymity.Core.Repositories
     {
         IEnumerable<User> Get();
         User Get(int id);
-        User Authenticate(string login, string password);
+        User Authenticate(string email, string password);
     }
 }

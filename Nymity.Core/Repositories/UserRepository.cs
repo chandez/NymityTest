@@ -15,15 +15,15 @@ namespace Nymity.Core.Repositories
             _connectionFactory = connectionFactory;
         }
 
-        public User Authenticate(string login, string password)
+        public User Authenticate(string email, string password)
         {
-            var query = @"SELECT [Id], [Name], [Email], [Password] FROM [dbo].[Users] WHERE [Id] = @id";
+            var query = @"SELECT Id, Name, Email, Password FROM [dbo].[Users] WHERE Email = @email AND Password = @password";
 
             User user;
 
             using (IDbConnection connection = _connectionFactory.GetConnection)
             {
-                user = SqlMapper.QueryFirstOrDefault<User>(connection, query, new { id });
+                user = SqlMapper.QueryFirstOrDefault<User>(connection, query, new { email, password });
             }
 
             return user;
@@ -31,7 +31,7 @@ namespace Nymity.Core.Repositories
 
         public IEnumerable<User> Get()
         {
-            var query = @"SELECT [Id], [Name], [Email], [Password] FROM [dbo].[Users]";
+            var query = @"SELECT Id, Name, Email, Password FROM [dbo].[Users]";
 
             IEnumerable<User> users;
 
@@ -45,7 +45,7 @@ namespace Nymity.Core.Repositories
 
         public User Get(int id)
         {
-            var query = @"SELECT [Id], [Name], [Email], [Password] FROM [dbo].[Users] WHERE [Id] = @id";
+            var query = @"SELECT Id, Name, Email, Password FROM [dbo].[Users] WHERE Id = @id";
 
             User user;
 

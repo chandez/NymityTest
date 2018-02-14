@@ -6,7 +6,7 @@ namespace Nymity.Test
 {
     public static class Fake
     {
-        public static User User() => new User { Id = 1, Name = "Chan", Email = "Chan@mail.com", Password = "123456" };
+        public static User User() => new User { Id = 1, Name = "Chan Valle", Email = "Chan@mail.com", Password = "123456" };
 
         public static IEnumerable<User> Users() => new Collection<User> {
             new User { Id = 1, Name = "User 1", Email = "user1@mail.com", Password = "123456" },
